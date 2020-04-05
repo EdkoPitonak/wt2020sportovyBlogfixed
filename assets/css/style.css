@@ -1,0 +1,208 @@
+/* custom styles */
+div.menu {
+    min-height: 100vh;
+    width: 180px;
+    background: rgb(162,127,19);
+    border-radius: 1px 50px 50px 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+img.Logo {
+   height: 115px;
+    margin-top: 50px;
+}
+img.Domov{
+    height: 25px;
+}
+img.Banner{
+    height: 25px;
+}
+img.Club{
+    height:25px;
+}
+div.nav-bar{
+    margin: 25px;
+}
+aside.nav-bar{
+    margin: 25px;
+}
+#banner-bar{
+    padding-top: 30px;
+}
+#club-bar{
+    padding-top: 30px;
+}
+#news-bar{
+    padding-top: 30px;
+}
+
+#domov-bar{
+    padding-top: 70px;
+}
+
+a.nav-bar-links{
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+}
+img.titulna-foto{
+    height: 280px;
+    border-radius: 40px 40px 40px 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+body{
+    background-color: white;
+}
+div.titulka{
+    padding-top: 30px;
+    margin-left: 200px;
+}
+div.closest-match{
+    padding-top: 20px;
+    margin-left: 200px;
+}
+p.close-match{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 40px;
+    margin-left: 20px;
+}
+div.close-match-1{
+    width: 250px;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 30px 30px 30px 30px;
+}
+p.zapasy{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 10px;
+    margin-left: 15px;
+    padding-top: 10px;
+    width: 40%;
+}
+div.someting{
+    margin-left: 150px;
+}
+p.clanok-nadpis{
+    font-size: 45px;
+}
+div.layout-clanok{
+    margin-top: 30px;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+    border-radius: 30px 30px 30px 30px;
+}
+
+div.layout-clanok2{
+    font-family: Montserrat;
+    text-align: center;
+    margin-top: 31px;
+    height: 325px;
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+table.poradie{
+    margin-top: 30px;
+    width:450px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+p.clanok-content1{
+    font-family: Montserrat;
+    margin-left: 12px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+li.list-header{
+    font-size: 25px;
+    background-color: rgb(162,127,19);
+}
+
+div.date-match{
+    float: right;
+    background-color: rgb(162,127,19);
+    height: 80px;
+    width: 80px;
+    border-radius: 15px 30px 30px 15px;
+}
+p.date-of-match{
+    font-family: Montserrat;
+    color: white;
+    text-align: center;
+    padding-top: 16px;
+}
+div.snehuliak{
+   padding-top: 280px;
+    padding-left: 280px;
+}
+footer.footer {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    float: right;
+    height: auto;
+    border-radius: 15px 30px 30px 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+
+p.footer-copy{
+   margin-top: 18px;
+}
+
+p.footer-email{
+    margin-top: 12px;
+}
+div.footer-fix{
+    width: 100%;
+}
+
+table.main-tabulka{
+    width:0.1%;
+    white-space: nowrap;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: rotate(20deg);
+
+    animation-name: example;
+    animation-duration: 4s;
+
+}
+
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
+
+form.formular{
+    width: 59%;
+    margin-left: 20rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#artOpinions{
+    margin-left: 50px;
+    border-radius: 40px 40px 40px 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 30%;
+}
+
+p.pridane{
+    text-align: left;
+    margin-left: 10px;
+    word-wrap: break-word;
+}
+p.nadpis-komentare{
+    text-align: center;
+    font-size: 35px;
+}
