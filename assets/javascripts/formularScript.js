@@ -73,3 +73,24 @@ function processOpnFrmData(event){
     console.log(opinions);
 
 }
+
+
+function removeButon() {
+    let m_komentare =[];
+
+    for (const komentar of opinions){
+        const dateNow = Date.now();
+        const dateCreated = new Date(komentar.created).getTime();
+
+        if (dateNow - dateCreated < 8640000) {
+            m_komentare.push(komentar);
+        }
+    }
+    opinions = m_komentare;
+    refreshOpinions();
+}
+
+function refreshOpinions() {
+    localStorage.chosenOnesComments = JSON.stringify(opinions);
+    opinionsElm.innerHTML = opinionArray2html(opinions);
+}
