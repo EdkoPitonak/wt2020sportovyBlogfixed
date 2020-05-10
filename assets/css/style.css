@@ -1,6 +1,7 @@
 /* custom styles */
 div.menu {
-    min-height: 100vh;
+    min-height: auto;
+    position: fixed;
     width: 180px;
     background: rgb(162,127,19);
     border-radius: 1px 50px 50px 1px;
@@ -35,8 +36,15 @@ aside.nav-bar{
     padding-top: 30px;
 }
 
+#news-bara {
+    padding-top: 30px;
+}
 #domov-bar{
     padding-top: 70px;
+}
+
+#router-view{
+    min-height: 100vh;
 }
 
 a.nav-bar-links{
@@ -53,6 +61,15 @@ img.titulna-foto{
 }
 body{
     background-color: white;
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+}
+
+html{
+    margin: 0px;
+    height: 100%;
+    width: 100%;
 }
 div.titulka{
     padding-top: 30px;
@@ -72,6 +89,7 @@ p.close-match{
 div.close-match-1{
     width: 250px;
     height: 80px;
+    margin-left: 15px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 30px 30px 30px 30px;
@@ -89,6 +107,7 @@ div.someting{
 }
 p.clanok-nadpis{
     font-size: 45px;
+    text-align: center;
 }
 div.layout-clanok{
     margin-top: 30px;
@@ -99,6 +118,7 @@ div.layout-clanok{
 
 div.layout-clanok2{
     font-family: Montserrat;
+    margin-left: 25px;
     text-align: center;
     margin-top: 31px;
     height: 325px;
@@ -108,6 +128,7 @@ div.layout-clanok2{
 
 table.poradie{
     margin-top: 30px;
+    margin-left: 26rem;
     width:450px;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -141,15 +162,21 @@ div.snehuliak{
    padding-top: 280px;
     padding-left: 280px;
 }
+
+div.test-fix{
+    padding-left: 200px;
+}
 footer.footer {
-    width: 100%;
-    position: relative;
     text-align: center;
     float: right;
     height: auto;
     border-radius: 15px 30px 30px 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 p.footer-copy{
@@ -161,17 +188,23 @@ p.footer-email{
 }
 div.footer-fix{
     width: 100%;
+    height: 45px;
 }
 
+div.close-match-nadpis{
+    padding-left: 220px;
+}
+
+div.clanok-2-fix{
+    padding-left: 200px;
+}
 table.main-tabulka{
     width:0.1%;
     white-space: nowrap;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transform: rotate(20deg);
+margin-left: 4rem;
 
-    animation-name: example;
-    animation-duration: 4s;
 
 }
 
@@ -184,30 +217,53 @@ table.main-tabulka{
 
 
 form.formular{
-    width: 59%;
-    margin-left: 20rem;
+    width: 30%;
+    margin-left: 29rem;
     padding-top: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding-bottom: 2rem;
+    border-radius: 30px 30px 30px 30px;
+}
+div.form-group{
+    padding-left: 15px;
 }
 
+fieldset.form-group{
+    padding-left: 15px;
+}
 
 #artOpinions{
-    margin-left: 50px;
+    margin-left: 500px;
     border-radius: 40px 40px 40px 40px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     max-width: 30%;
 }
 
+div.clanky-test{
+    margin-left: 200px;
+}
 p.pridane{
-    text-align: left;
-    margin-left: 10px;
+    text-align: center;
     word-wrap: break-word;
-    padding: 5px;
+
+
+}
+article.article-dizajn{
+    border-radius: 40px 40px 40px 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 0.3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+a.article-link-dizajn{
+    color: black;
 }
 p.nadpis-komentare{
     text-align: center;
     font-size: 2rem;
     word-wrap: break-word;
+
 }
 
 body.klub{
@@ -216,3 +272,30 @@ body.klub{
             #DA3F94
     );
 }
+
+form.articleaddform{
+    width: 50%;
+    margin-left: 17rem;
+    padding-top: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   padding-bottom: 2rem;
+    border-radius: 30px 30px 30px 30px;
+
+}
+
+h2.center{
+    text-align: center;
+
+}
+
+label.articlepadingtext{
+    padding-left: 1rem;
+
+}
+
+
+
+input.scriptTest{
+    width: 70%;
+}
+

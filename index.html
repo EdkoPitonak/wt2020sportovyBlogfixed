@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="sk">
 <head>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="UTF-8">
     <title>The Chosen Ones</title>
     <!--  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">-->
@@ -10,30 +11,136 @@
 </head>
 
 <body>
-<!--Header/menu vlavo-->
 <div class="float-left">
     <div class ="menu">
         <div class="text-center">
             <img src="assets/img/Logo.png" class="Logo" alt="logo">
         </div>
 
-        <aside class="nav-bar">
-            <div id="domov-bar"><img src="assets/img/dom.png" class="Domov" alt="domov"><a href="index.html" class="nav-bar-links text-decoration-light">DOMOV</a></div>
-            <div id="banner-bar"><img src="assets/img/banner.png" class="Banner" alt="banner"><a href="tim.html" class="nav-bar-links text-decoration-light">TÃM</a></div>
-            <div id="club-bar"><img src="assets/img/hockey.png" class="Club" alt="club"><a href="klub.html" class="nav-bar-links text-decoration-light">KLUB</a></div>
-            <div id="news-bar"><img src="assets/img/novinky.png" class="Club" alt="club"><a href="clanok.html" class="nav-bar-links text-decoration-light">NOVINKY</a></div>
-        </aside>
+        <div class="nav-bar">
+            <div id="domov-bar"><img src="assets/img/dom.png" class="Domov" alt="domov"><a href="index.html" class="nav-bar-links text-decoration-light">Domov</a></div>
+            <div id="banner-bar"><img src="assets/img/banner.png" class="Banner" alt="banner"><a href="#articles/1/10" class="nav-bar-links text-decoration-light">Clanky</a></div>
+            <div id="club-bar"><img src="assets/img/hockey.png" class="Club" alt="club"><a href="#opinions" class="nav-bar-links text-decoration-light">Nazory</a></div>
+            <div id="news-bar"><img src="assets/img/novinky.png" class="Club" alt="club"><a href="#addOpinion" class="nav-bar-links text-decoration-light">Komentuj</a></div>
+            <div id="news-bara"><img src="assets/img/novinky.png" class="Club" alt="club"><a href="#addpost" class="nav-bar-links text-decoration-light">Add post</a></div>
+        </div>
 
     </div>
 </div>
 
-<div class="container-home-wrapper">
+<main id="router-view">
+
+</main>
+
+<!--<footer >-->
+<!--    <div class="col-xs-3" >-->
+<!--        <p class="footer-copy">Â©Eduard Jozef PitoÅÃ¡k</p>-->
+<!--    </div>-->
+
+<!--    <div class="col-xs-3" >-->
+<!--        <p class="footer-email"> <a href="mailto:some@email.com" target="_blank" class="btn btn-primary">PoÅ¡lite nÃ¡m mail</a>  </p>-->
+<!--    </div>-->
+
+<!--</footer>-->
+
+<!--Templates for html, dynamically inserted by the router -->
+<script id="clanok2" type="text/template">
+
+    <body>
+    <!--Header/menu vlavo-->
+
+
+
+    <div class="main-container">
+        <div class="row">
+            <div class="col-md-10">
+                <p class="clanok-nadpis text-center">Prestupove obdobie skonÄilo</p>
+            </div>
+        </div>
+
+        <div class="row clanok-2-fix">
+            <div class="col-md-4">
+                <div class="layout-clanok">
+                    <p class="clanok-content1">Pred uzavretÃ­m sÃºpisiek sa snaÅ¾ili mustvÃ¡ doladiÅ¥ poslednÃ© chybiÄky v zostavÃ¡ch aby iÅ¡li do play off
+                        v Äo najsilneÅ¡Ã­ch zostavÃ¡ch, veÄ¾kou prestupovou bombou je prÃ¡ve Denis KundÄ¾a ktorÃ½ opÃºÅ¡ta team Chosen Ones a pridÃ¡va sa ku KeÅ¾marku.
+
+                    </p>
+                    <p class="clanok-content1">Autor : HumenÃ­k <br> <a href="mailto:someone@yoursite.com">Email</a>  </p>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3">
+                <table class="table table-bordered table-light poradie table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">NÃ¡zov</th>
+                        <th scope="col">PZ</th>
+                        <th scope="col">PoÄet bodov</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>StarÃ¡ Ä½ubovna</td>
+                        <td>15</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>VeÄ¾kÃ¡ Lomnica</td>
+                        <td>13</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>SpiÅ¡skÃ© Podhradie</td>
+                        <td>14</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Focus KeÅ¾marok</td>
+                        <td>13</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Chosen Ones</td>
+                        <td>15</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Night Riders</td>
+                        <td>12</td>
+                        <td>2</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+</script>
+
+
+
+<script id="template-welcome" type="text/template">
+    <body>
+    <!--Header/menu vlavo-->
+
+    <div class="container-home-wrapper">
         <div class="row titulka">
-            <header class="col-md-8">
+            <header class="col-xs-8">
                 <img src ="assets/img/titulna-foto.JPG.png" alt="titulna fotka" class="titulna-foto" title="Najkrajsi chlapci">
             </header>
 
-            <div class="coll-md-4">
+            <div class="coll-xs-4">
                 <table class="table table-bordered table-light main-tabulka table-hover">
                     <thead>
                     <tr>
@@ -85,10 +192,10 @@
             </div>
         </div>
 
-        <div class="row"><div class="col-sm-3" ><p class="close-match">Najblizsie zapasy</p></div> </div>
+        <div class="row close-match-nadpis"><div class="col-xs-3" ><p class="close-match">Najblizsie zapasy</p></div> </div>
 
         <div class="row closest-match">
-            <div class="col-sm-3">
+            <div class="col-xs-3">
                 <div class="close-match-1">
                     <div class="date-match"><p class="date-of-match">27.2<br> 18:00</p></div>
                     <p class="zapasy">The chosen ones</p>
@@ -96,7 +203,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-xs-3">
                 <div class="close-match-1">
                     <div class="date-match"><p class="date-of-match">27.2<br> 18:00</p></div>
                     <p class="zapasy">The chosen ones</p>
@@ -104,7 +211,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-xs-3">
                 <div class="close-match-1">
                     <div class="date-match"><p class="date-of-match">27.2<br> 18:00</p></div>
                     <p class="zapasy">The chosen ones</p>
@@ -112,7 +219,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-xs-3">
                 <div class="close-match-1">
                     <div class="date-match"><p class="date-of-match">27.2<br> 18:00</p></div>
                     <p class="zapasy">The chosen ones</p>
@@ -121,18 +228,523 @@
             </div>
         </div>
 
-</div>
+    </div>
+</script>
 
-<footer class="footer">
-    <div class="row footer-fix">
-        <div class="col-sm-3" >
-            <p class="footer-copy">Â©Eduard Jozef PitoÅÃ¡k</p>
+
+<script id="template-articles" type="text/template">
+    <div class="clanky-test">
+        {{#.}}
+        <article>
+            <h2><a href="{{detailLink}}">{{title}}</a></h2>
+            {{#imageLink}}
+            <figure>
+                <img src="{{imageLink}}" class="maxW" alt="article figure" />
+            </figure>
+            {{/imageLink}}
+
+            <div>
+                {{contentPrev}}
+            </div>
+            <p>
+                <br>
+                <b>by {{author}}</b>
+            </p>
+            <h5> Comments </h5>
+            <ul>
+                {{#comments}}
+                <li>{{{text}}}</li>
+                {{/comments}}
+            </ul>
+        </article>
+        {{/.}}
+
+
+    </div>
+</script>
+
+<script id="template-articles-error" type="text/template">
+
+    <article>
+        <h2>Articles acquisition failed</h2>
+        <p>
+            {{errMessage}}
+        </p>
+    </article>
+
+
+</script>
+
+
+<script id="template-opinions" type="text/template">
+
+    <article  id="artOpinions">
+        <p class="nadpis-komentare">KomentÃ¡re</p>
+        {{#.}}
+        <section>
+            <b><p class="pridane">Meno : </b> {{Meno}}</p>
+            <b><p class="pridane">Email : </b> {{Email}}</p>
+            <b><p class="pridane">VyhrÃ¡me ?</b> {{Vyhrame}}</p>
+            <b> <p class="pridane">KomentÃ¡r :</b> {{Comment}}</p>
+            <b> <p class="pridane">Klucove slovo : </b>{{Klucove}}</p>
+            <b> <p class="pridane">PrÃ­loha : </b>{{Priloha}}</p>
+            <b> <p class="pridane">MÃ¡te nÃ¡s radi ?</b> {{Radi}}</p>
+            <br>
+        </section>
+        {{/.}}
+        {{^.}}
+        <section>
+            Sorry, no opinions found.
+        </section>
+        {{/.}}
+
+    </article>
+
+</script>
+
+
+
+<script id="template-addOpinion" type="text/template">
+
+    <body>
+
+    <div class="main-container">
+        <div class="row">
+            <div class="col-md-10">
+                <p class="clanok-nadpis">NapÃ­sali o nÃ¡s</p>
+            </div>
         </div>
 
-        <div class="col-sm-3" >
-            <p class="footer-email"> <a href="mailto:some@email.com" target="_blank" class="btn btn-primary">PoÅ¡lite nÃ¡m mail</a>  </p>
+        <div class="row test-fix">
+            <div class="col-xs-4">
+                <div class="layout-clanok">
+                    <p class="clanok-content1">ÄalÅ¡Ã­m hracÃ­m dÅom pokraÄovala 29. februÃ¡ra 2020 PodtatranskÃ¡ florbalovÃ¡ liga.<br> Aj keÄ na programe boli iba dva zÃ¡pasy obidve priniesli prekvapenia.
+                        NajskÃ´r sa predstavili dve muÅ¾stvÃ¡, ktorÃ© sa netaja vyhraÅ¥ sÃºÅ¥aÅ¾. I preto bolo skÃ³re po prvej tretine priam Å¡okujÃºce, 5:0 v neprospech lÃ­dra. Potom sa sÃ­ce hrÃ¡Äi Falcons spamÃ¤tali, ale nakoniec aj na konci bol rozdiel v skÃ³re prÃ¡ve o rozdiel z prvej tretiny.
+                        Do druhÃ©ho zÃ¡pasu nastÃºpili hrÃ¡Äi z VeÄ¾kej Lomnice ako vysokÃ½ favorit. SÃºperi hrali iba v Å¡estici, no napriek tomu sa vysokÃ½ favorit nevedel presadiÅ¥. V prvÃ½ch dvoch tretinÃ¡ch nestrelil ani gÃ³l, naopak, sÃºper viedol 2:0. Aj v tomto zÃ¡pase si tento nÃ¡skok, muÅ¾stvo, ktorÃ© viedlo, udrÅ¾alo aÅ¾ do konca a prekvapujÃºco, ale zaslÃºÅ¾ene zvÃ­Å¥azilo.
+                        <a href="#clanok2">Predchadzajuci clanok</a>
+                    </p>
+                    <p class="clanok-content1"> Autor : Humenik <br> <a href="mailto:someone@yoursite.com">Email</a></p>
+                </div>
+            </div>
+
+            <div class="col-xs-3">
+                <div class="layout-clanok2">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item list-header">Äo musia BelanÄania zlepÅ¡it!</li>
+                        <li class="list-group-item">DochÃ¡dzku</li>
+                        <li class="list-group-item">SÃºstredenosÅ¥</li>
+                        <li class="list-group-item">Koncovku</li>
+                        <li class="list-group-item">PresnosÅ¥</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-xs-3">
+                <table class="table table-bordered table-light poradie table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">NÃ¡zov</th>
+                        <th scope="col">PZ</th>
+                        <th scope="col">PoÄet bodov</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>StarÃ¡ Ä½ubovna</td>
+                        <td>16</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>VeÄ¾kÃ¡ Lomnica</td>
+                        <td>14</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>SpiÅ¡skÃ© Podhradie</td>
+                        <td>15</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Focus KeÅ¾marok</td>
+                        <td>14</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Chosen Ones</td>
+                        <td>16</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Night Riders</td>
+                        <td>13</td>
+                        <td>2</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</footer>
+
+    <article  id="artOpnFrm">
+        <form  class ="formular" id="opnFrm" onsubmit="return processOpnFrmData(event)">
+            <div class="form-group row">
+                <label for="validationCustom01" class="col-sm-2 col-form-label">Meno</label>
+
+                <div class="col-sm-10">
+                    <input type="text" name="login" class="form-control scriptTest" id="validationCustom01" placeholder="Meno" required>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control scriptTest" id="inputEmail3" placeholder="Email" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlFile1">PrÃ­loha </label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">MÃ¡te nas radi ?</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                                Ãno
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                            <label class="form-check-label" for="gridRadios2">
+                                Absolutne
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-group row">
+                <div class="col-sm-2">VyhrÃ¡me ?</div>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            JasnÃ©
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="klucove-vyber">Klucove slovo:</label>
+                <input list="klucove-moznost" id="klucove-vyber" name="klucove-vyber" />
+
+                <datalist id="klucove-moznost">
+                    <option value="Florbal">
+                    <option value="Sport">
+                    <option value="Muzstvo">
+                    <option value="Teamwork">
+                </datalist>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">VaÅ¡a sprÃ¡va</label>
+                <textarea class="form-control" name="comment" id="exampleFormControlTextarea1" rows="3"  placeholder="NapÃ­Å¡te nÃ¡m akÃ­ sme skvelÃ­" required></textarea>
+            </div>
+
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">PoslaÅ¥</button>
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                </div>
+
+            </div>
+        </form>
+
+    </article>
+
+</script>
+
+<script id="template-article" type="text/template">
+    <div class="clanky-test">
+    <article>
+        <h3>{{title}}</h3>
+        <p>
+            by {{author}}
+        </p>
+        {{#imageLink}}
+        <figure>
+            <img src="{{imageLink}}" alt="article figure" />
+        </figure>
+        {{/imageLink}}
+        <div>{{{content}}}</div>
+
+        <h5> Comments </h5>
+        <ul>
+            {{#comments}}
+            <li>{{{text}}}</li>
+            {{/comments}}
+        </ul>
+
+        <p>
+            Keywords:
+            {{tags}}
+        </p>
+    </article>
+        <footer>
+            <a href="{{backLink}}" class="linkAsButton btn btn-primary"><< Back</a>
+            <a href="{{editLink}}" class="linkAsButton btn btn-primary">Edit</a>
+            <a href="{{deleteLink}}" onclick="deleteArticle({{id}})" class="linkAsButton btn btn-primary">Delete</a>
+        </footer>
+    </div>
+</script>
+
+
+<script id="template-article-form" type="text/template">
+    <div class="clanky-test">
+    <article>
+        <h2>{{formTitle}}</h2>
+        <br><br>
+        <form id="articleForm" onsubmit="return {{formSubmitCall}}">
+            <label for="author">Author:</label>
+            <input type="text" name="author" id="author" value="{{author}}" size="50" title="Article author, max. length 100 characters." maxlength="100" placeholder="e.g. JÃ¡n Trieska" />
+            <br>
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" value="{{title}}" size="50"  maxlength="100" pattern="\S[\S\s]*" required title="Article title, mandatory item, max. length: 100 characters, the first character must not be a space." placeholder="e.g. My story." />
+            <br>
+            <label for="imageLink">Image (url):</label>
+            <input type="url" name="imageLink" id="imageLink" value="{{imageLink}}" size="50" title="Image URL, max. length 100 characters." maxlength="100"/>
+            <br>
+            <label></label><button type="button" id="btShowFileUpload" onclick="showFileUpload()">Upload image</button>
+
+            <fieldset class="added hiddenElm" id="fsetFileUpload">
+                <legend>Image Upload</legend>
+                <input type="file" id="flElm" name="file" accept="image/jpeg, image/png"/>
+                <br />
+                <button type="button" id="btFileUpload" onclick="uploadImg('{{urlBase}}')">Send image to server</button>
+                <button type="button" id="btCancelFileUpload" onclick="cancelFileUpload()">Cancel uploading</button>
+            </fieldset>
+
+            <br>
+            <label for="content">Article content:</label>
+            <textarea
+                    name="content" id="content" spellcheck="true" lang="sk"
+                    cols="50" rows="20" required
+                    title="Article content, mandatory item, can be plain text or in HTML.">{{content}}</textarea>
+            <br>
+            <label for="tags">Keywords:</label>
+            <input  type="text" name="tags" id="tags" value="{{tags}}" size="50"
+                    title="Keyword list, comma separated." placeholder="e.g. village, drama" />
+
+            <br>
+            <br>
+            <button type="reset">
+                Reset Form
+            </button>
+            <button type="submit">
+                {{submitBtTitle}}
+            </button>
+        </form>
+    </article>
+    <footer>
+        <a href="{{backLink}}" class="linkAsButton"><< Back</a>
+        <a href="#menuTitle" class="linkAsButton">Up to the menu</a>
+    </footer>
+    </div>
+</script>
+
+<script id="template-addpost" type="text/template">
+
+<div class="clanky-test">
+<Article>
+    <h2 class="center">NovÃ½ ÄlÃ¡nok / New Article</h2>
+    <form id="articleFormAdd" class="articleaddform">
+
+        <label for="author" class="articlepadingtext">Autor / Author:</label>
+        <input type="text" name="author" id="author2" size="50" title="Autor ÄlÃ¡nku, maximÃ¡lna dÄºÅ¾ka: 100 znakov (article author, max. length 100 characters)." maxlength="100" placeholder="Meno" />
+        <br>
+        <label for="title" class="articlepadingtext">NÃ¡zov / Title:</label>
+        <input type="text" name="title" id="title2" size="50"  maxlength="100" pattern="\S[\S\s]*" required title="NÃ¡zov ÄlÃ¡nku, povinnÃ¡ poloÅ¾ka, maximÃ¡lna dÄºÅ¾ka: 100 znakov, prvÃ½ znak nesmie byÅ¥ medzera (Article title, mandatory item, max. length: 100 characters, the first character must not be a space)." placeholder="Title" />
+        <br>
+        <label for="content" class="articlepadingtext">Text ÄlÃ¡nku / Article content:</label>
+        <textarea name="content" id="content2"  spellcheck="true" lang="sk" cols="30" rows="10" required title="Obsah ÄlÃ¡nku, povinnÃ¡ poloÅ¾ka,  mÃ´Å¾e byÅ¥ obyÄajnÃ½ text alebo html (Article content, mandatory item, can be plain text or in HTML)."></textarea>
+        <br>
+        <br>
+
+        <button type="reset">
+            Reset
+        </button>
+        <button type="button" onclick="addNewArticle()">
+            Pridaj ÄlÃ¡nok / Add article
+        </button>
+
+    </form>
+</Article>
+
+<article id="serverResponse">
+</article>
+
+</div>
+
+</script>
+<script>
+    const serverUrl = "http://wt.kpi.fei.tuke.sk/api";
+
+    function deleteArticle(id2Delete) {
+
+        const deleteReqSettings =
+            {
+                method: 'DELETE'
+            };
+        fetch(`${serverUrl}/article/${id2Delete}`, deleteReqSettings)
+            .then(response => {
+                if (response.ok) {
+
+                } else {
+                    return Promise.reject(new Error(`Server answered with ${response.status}: ${response.statusText}.`)); //we return a rejected promise to be catched later
+                }
+            })
+            .catch(error => {
+            });
+    }
+</script>
+
+
+<script>
+
+    function addNewArticle() {
+
+       const outputEmlId = "serverResponse";
+       const urlBase =  "https://wt.kpi.fei.tuke.sk/api";
+
+        window.alert(urlBase);
+        window.alert(outputEmlId);
+
+        const articleElm = document.getElementById(outputEmlId);
+
+        //1. Gather and check the form data
+
+        const newArtData = {
+            title: document.getElementById("title2").value.trim(),
+            content: document.getElementById("content2").value.trim(),
+            author: document.getElementById("author2").value.trim()
+        };
+
+        if (!(newArtData.title && newArtData.content)) {
+            window.alert("Please, enter article title and content");
+            return;
+        }
+
+        if (!newArtData.author) {
+            newArtData.author = "Anonymous";
+        }
+
+        const postReqSettings = //an object wih settings of the request
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8',
+                },
+                body: JSON.stringify(newArtData)
+            };
+
+        fetch(`${urlBase}/article`, postReqSettings)  //now we need the second parameter, an object wih settings of the request.
+            .then(response => {      //fetch promise fullfilled (operation completed successfully)
+                if (response.ok) {    //successful execution includes an error response from the server. So we have to check the return status of the response here.
+                    return response.json(); //we return a new promise with the response data in JSON to be processed
+                } else { //if we get server error
+                    return Promise.reject(new Error(`Server answered with ${response.status}: ${response.statusText}.`)); //we return a rejected promise to be catched later
+                }
+            })
+            .then(responseJSON => { //here we process the returned response data in JSON ...
+                articleElm.innerHTML =
+                    `
+                    <h2>Article successfully posted with id=${responseJSON.id}</h2>
+                    <h3>${responseJSON.title}</h3><div>${responseJSON.content}
+                `;
+                console.log(responseJSON);
+            })
+            .catch(error => { ////here we process all the failed promises
+                articleElm.innerHTML =
+                    `
+                    <h2>Error reading data from the server</h2>
+                    ${error}
+                `;
+            });
+    }
+
+
+</script>
+<!--musel som to tu pridat inak to neslo v tomto codesandboxe mne to ide normalne cez link nechapem...-->
+<script>function processOpnFrmData(event){
+    //1.prevent normal event (form sending) processing
+    event.preventDefault();
+
+    //2. Read and adjust data from the form (here we remove white spaces before and after the strings)
+    const Name = document.getElementById("validationCustom01").value;
+    const email = document.getElementById("inputEmail3").value;
+    const checkBox = document.getElementById("gridCheck1").checked;
+    const comment = document.getElementById("exampleFormControlTextarea1").value;
+    const klucove = document.getElementById("klucove-vyber").value;
+    const priloha = document.getElementById("exampleFormControlFile1").value;
+    const radi = document.getElementById("gridRadios1").value;
+
+    //3. Verify the data
+
+
+    //3. Add the data to the array opinions and local storage
+    const newOpinion =
+        {
+            Meno: Name,
+            Email: email,
+            Vyhrame: checkBox,
+            Comment: comment,
+            Klucove: klucove,
+            Priloha: priloha,
+            Radi: radi,
+            created: new Date()
+
+        };
+
+
+    let opinions = [];
+
+    if(localStorage.myTreesComments){
+        opinions=JSON.parse(localStorage.myTreesComments);
+    }
+
+    opinions.push(newOpinion);
+    localStorage.myTreesComments = JSON.stringify(opinions);
+
+
+
+    //5. Go to the opinions
+    window.location.hash="#opinions";
+
+}</script>
+
+<script src="assets/js/routes.js"></script>
+
+<script src="assets/js/mainMenu.js"></script>
+
+<script src="assets/js/addOpinion.js"></script>
+
+<script src="assets/js/handleArticleForms.js"></script>
+
+<script type="module" src="assets/js/routerInit.js"></script>
+
+
+
 </body>
 </html>
